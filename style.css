@@ -1,16 +1,21 @@
-:root{
-    --cor-de-fundo:#0000;
-    --verde:#5FFF57;
-    --branco:#FFFFFF;
-    --botao-ativo:#3a357e;
-    --botao-inativo:#rgb(58,55,94,0.5);
-    --texto-fundo:#rgb(58,55,94,0.3);
+:root {
+    --cor-de-fundo: #1e1e1e;
+    --verde: #5FFF57;
+    --branco: #FFFFFF;
+    --botao-ativo: #3A375E;
+    --botao-inativo: rgba(58,55,94,0,5);
+    --texto-fundo: rgba(58,55,94,0,3);
 }
 
 *{
-    background-color: rgb(0, 0, 0);
-    color: #FFFFFF;
-
+  
+    color:var(--branco)
+}
+body{
+    background-color: var(--cor-de-fundo);
+}
+span{
+    color: var(--verde);
 }
 
 .conteudo-principal{
@@ -19,10 +24,9 @@
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    width: 100%;
     margin: 0 auto;
-
 }
+
 
 .titulo-principal{
     text-align: center;
@@ -30,49 +34,66 @@
     font-size: 32px;
 }
 
-.botao{
-    background-color: #3a3a3a;
-    color: #ffffff;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-size: 18px;
-    padding: 1cm;
-    border-bottom:4px #5FFF57;
-    border-left:2px #ffffff;
-    border-right:2px #ffffff;
-
-}
-
 .botoes{
     display: block;
 }
 
+.botao{
+    background-color: var(--botao-inativo);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    padding: 1em;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+}
+
 .botao:first-child{
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 20px 20px 0 0;
 }
 
 .botao:last-child{
-    border-radius: 0px 0px 20px 20px;
+    border-radius:0 0 20px 20px;
 }
-.ativo{
+ .botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 2px solid var(--verde);
 }
+.aba-conteudo{
+    display: none;
+}
+.aba-conteudo.ativo{
+    display: block;
+}
+.aba-textos{
+    background-color: var(--botao-ativo);
+    padding: 25px;
+    border-radius: 25ppx;
+}
+.aba-conteudo.titulo-principal{
+    font-size: 28px;
+}
+.aba-conteudo.titulo-secundario{
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+}
 
-
-@media screen and (min-width: 700px){
+@media screen and (min-width:700px){
     .botoes{
         display: flex;
     }
-
     .botao:first-child{
-        border-radius: 20px 0px 0px 20px;
+        border-radius: 20px 0 0 20px;
     }
 
     .botao:last-child{
-        border-radius: 0px 20px 20px 0px    ;
+        border-radius: 0 20px 20px 0;
     }
-    
 }
+
 
