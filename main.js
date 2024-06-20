@@ -8,7 +8,16 @@ tempo[0].textContent = tempoObjetivo1
 tempo[1].textContent = tempoObjetivo2
 
 const  agora = new Date()
-
+let segundos;
+let minutos;
+let horas;
+let dias;
+segundos=(tempoObjetivo1-agora)/1000
+minutos=segundos/60
+horas=minutos/60
+dias=horas/24
+tempo[0].textContent=tempoObjetivo1-agora
+tempo[0].textContent=tempoObjetivo2-agora
 console.log(tempo)
 for(let i = 0; 1 < botoes.length ; i++){
     botoes[i].onclick = function() {
