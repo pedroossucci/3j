@@ -74,10 +74,11 @@ span{
     padding: 25px;
     border-radius: 25ppx;
 }
-.aba-conteudo.titulo-principal{
+.aba-conteudo-titulo-principal{
+    text-align: center;
     font-size: 28px;
 }
-.aba-conteudo.titulo-secundario{
+.aba-conteudo-titulo-secundario{
     text-align: center;
     color: var(--verde);
     text-transform: uppercase;
