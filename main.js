@@ -11,7 +11,7 @@ function calculaTempo(tempoObjetivo){
     let minutos
     let horas
     let dia
-    segundos = (tempoObjetivo-agora)/1000
+    segundos = ((tempoObjetivo-agora)/1000)
     minutos = segundos/60
     horas = minutos/60
     dias = horas/24
@@ -24,7 +24,11 @@ function calculaTempo(tempoObjetivo){
     minutos = minutos%60
     horas = horas%24
 
+    if(segundos >= 0){
     return `faltam ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`
+    } else {  
+        return 'Prazo Finalizado!'   
+    }
 
 }
 
