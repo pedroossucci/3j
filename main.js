@@ -31,6 +31,16 @@ function calculaTempo(tempoObjetivo){
     }
 
 }
+function atualizaCronometro(){
+
+    for (let; i<contadores.length;i++){
+        contadore[i]. textContent = calculaTempo(tempo[i]);
+    }
+}
+function comecaCronometro(){
+    atualizaCronometro();
+    setInterval(atualizaCronometro,1000);
+}
 
   tempo[0].textContent = calculaTempo (tempoObjetivo1);
   tempo[1].textContent = calculaTempo (tempoObjetivo2); 
