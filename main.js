@@ -1,16 +1,16 @@
 const botoes = document.querySelectorAll(".botao");
 const conteudo = document.querySelectorAll(".aba-conteudo");
-const tempo = document.querySelectorAll(".contador");
+const contador = document.querySelectorAll(".contador");
 
 const  tempoObjetivo1 = new Date(2024,11,30);
 const  tempoObjetivo2 = new Date(2024,11,30);
-
+const tempos(tempoobjetivo1,tempoobjetivo2);
 function calculaTempo(tempoObjetivo){
     const agora = new Date()
     let segundos
     let minutos
     let horas
-    let dia
+    let dias
     segundos = ((tempoObjetivo-agora)/1000)
     minutos = segundos/60
     horas = minutos/60
@@ -33,9 +33,10 @@ function calculaTempo(tempoObjetivo){
 }
 function atualizaCronometro(){
 
-    for (let; i<contadores.length;i++){
-        contadore[i]. textContent = calculaTempo(tempo[i]);
+    for (let i=0; i<contadores.length;i++){
+        contador[i]. textContent = calculaTempo(tempo[i]);
     }
+    comecaCronometro()
 }
 function comecaCronometro(){
     atualizaCronometro();
