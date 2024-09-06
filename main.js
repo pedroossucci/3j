@@ -4,7 +4,7 @@ const contador = document.querySelectorAll(".contador");
 
 const  tempoObjetivo1 = new Date(2024,11,30);
 const  tempoObjetivo2 = new Date(2024,11,30);
-const tempos = [tempoObjetivo1,tempoObjetivo2];
+const  tempos = [tempoObjetivo1,tempoObjetivo2];
 function calculaTempo(tempoObjetivo){
     const agora = new Date()
     let segundos
@@ -33,19 +33,15 @@ function calculaTempo(tempoObjetivo){
 }
 function atualizaCronometro(){
 
-    for (let i=0; i<contadores.length;i++){
-        contador[i]. textContent = calculaTempo(tempo[i]);
+    for (let i=0; i<contador.length;i++){
+        contador[i]. textContent = calculaTempo(tempos[i]);
     }
-    comecaCronometro()
 }
 function comecaCronometro(){
     atualizaCronometro();
     setInterval(atualizaCronometro,1000);
 }
-
-  tempo[0].textContent = calculaTempo (tempoObjetivo1);
-  tempo[1].textContent = calculaTempo (tempoObjetivo2); 
-
+comecaCronometro()
 
 for(let i = 0; i < botoes.length ; i++){
     botoes[i].onclick = function() {
@@ -57,3 +53,4 @@ for(let i = 0; i < botoes.length ; i++){
         conteudo[i].classList.add("ativo")
     }
 }
+
