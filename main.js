@@ -4,7 +4,7 @@ const contador = document.querySelectorAll(".contador");
 
 const  tempoObjetivo1 = new Date(2024,11,30);
 const  tempoObjetivo2 = new Date(2024,11,30);
-const tempos(tempoobjetivo1,tempoobjetivo2);
+const tempos = [tempoObjetivo1,tempoObjetivo2];
 function calculaTempo(tempoObjetivo){
     const agora = new Date()
     let segundos
